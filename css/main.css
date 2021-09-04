@@ -1,0 +1,32 @@
+/* https://dribbble.com/shots/14372444-Sign-Up-Sign-In-Register/attachments/6041664?mode=media */
+/* https://dribbble.com/shots/8502333-Declarange-Admin-Dashboard/attachments/793448?mode=media */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .login-img {
+  max-width: 500px;
+  width: 100%;
+}
+
+.login-section .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=main.css.map */
