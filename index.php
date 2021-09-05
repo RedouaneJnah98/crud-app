@@ -3,7 +3,26 @@
 <?php
 
 if (isset($_POST["login"])) {
-    echo $_POST["first_name"];
+    $firstname = $_POST["firstname"];
+    $last_name = $_POST["lastname"];
+    $phone_number = $_POST["phone_number"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $confirm_password = $_POST["confirm_password"];
+
+    $firstname = mysqli_real_escape_string($connection, $firstname);
+    $password = mysqli_real_escape_string($connection, $password);
+
+    $query = "INSERT INTO users (firstname, lastname, phone_number, email, password, confirm_password) ";
+    $query .= "VALUES ('$firstname', '$last_name', $phone_number, '$email', '$password', '$confirm_password')";
+
+    $create_user = mysqli_query($connection, $query);
+
+    if (!$create_user) {
+        die("FAILED QUERY" . mysqli_error($connection));
+    }
+
+    header("Location: admin/home.php");
 }
 
 ?>
@@ -18,16 +37,16 @@ if (isset($_POST["login"])) {
         </p>
 
         <!-- form -->
-        <form action="" method="post" class="form">
+        <form action="includes/login.php" method="post" class="form">
 
             <div class="form-group">
                 <div>
                     <label for="firstname">First Name</label>
-                    <input type="text" name="first_name">
+                    <input type="text" name="firstname">
                 </div>
                 <div>
                     <label for="lastname">Last Name</label>
-                    <input type="text" name="last_name">
+                    <input type="text" name="lastname">
                 </div>
             </div>
 
@@ -45,7 +64,7 @@ if (isset($_POST["login"])) {
             <div class="form-group">
                 <div>
                     <label for="user_password">Password</label>
-                    <input type="password" name="user_password">
+                    <input type="password" name="password">
                 </div>
                 <div>
                     <label for="confirmPassword">Confirm Passord</label>
@@ -54,7 +73,7 @@ if (isset($_POST["login"])) {
             </div>
 
             <button type="submit" name="login" class="btn">Create Account</button>
-            <p class="login-p">Already have an account? <a href="#" class="login-link">Log in</a> </p>
+            <p class="login-p">Already have an account? <a href="includes/login.php" class="login-link">Log in</a> </p>
 
         </form>
         <!-- end of form -->
