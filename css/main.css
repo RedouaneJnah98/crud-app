@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: "Cairo", sans-serif;
   font-size: 16px;
@@ -25,11 +29,92 @@ body {
 }
 
 .container .login-section {
-  padding: 2rem;
+  padding-left: 6rem;
 }
 
 .container .login-section .title {
   font-weight: 600;
   font-size: 2rem;
+  color: #163150;
+  margin-bottom: 2rem;
+  letter-spacing: 1.2px;
+}
+
+.container .login-section h4 {
+  color: #163150;
+  font-size: 1.1rem;
+  margin-bottom: 0.5 rem;
+}
+
+.container .login-section .text {
+  color: #BE93DC;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.form {
+  margin-top: 1.5rem;
+}
+
+.form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form .form-group div {
+  display: -ms-grid;
+  display: grid;
+}
+
+.form label {
+  color: #163150;
+  font-weight: 600;
+}
+
+.form input {
+  width: 290px;
+  height: 40px;
+  margin: 0.4rem 0;
+  border: 1px solid #8CF8F2;
+  border-radius: 5px;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.form .btn {
+  margin: 2rem 0 1rem;
+  border: none;
+  background: #4F88CF;
+  color: #fff;
+  padding: 0.7rem 2.8rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  cursor: pointer;
+}
+
+.form .btn:hover {
+  opacity: 0.8;
+}
+
+.login-p {
+  color: #163150;
+  font-weight: 700;
+}
+
+.login-p .login-link {
+  color: #4F88CF;
+}
+
+.login-p .login-link:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */
