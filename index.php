@@ -1,4 +1,4 @@
-<?php include_once "includes/header.php"; ?>
+<?php include_once "header.php"; ?>
 
 <section class="container">
     <img src="./images/login-img.jpg" class="login-img" alt="technology image">

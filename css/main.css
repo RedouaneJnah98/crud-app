@@ -1,10 +1,14 @@
-/* https://dribbble.com/shots/14372444-Sign-Up-Sign-In-Register/attachments/6041664?mode=media */
-/* https://dribbble.com/shots/8502333-Declarange-Admin-Dashboard/attachments/793448?mode=media */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
 }
 
 .container {
@@ -17,16 +21,15 @@
 }
 
 .container .login-img {
-  max-width: 500px;
-  width: 100%;
+  width: 500px;
 }
 
-.login-section .form-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.container .login-section {
+  padding: 2rem;
+}
+
+.container .login-section .title {
+  font-weight: 600;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
