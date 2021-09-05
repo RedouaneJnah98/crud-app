@@ -1,5 +1,13 @@
 <?php include_once "header.php"; ?>
 
+<?php
+
+if (isset($_POST["login"])) {
+    echo $_POST["first_name"];
+}
+
+?>
+
 <section class="container">
     <img src="./images/login-img.jpg" class="login-img" alt="technology image">
 
@@ -45,7 +53,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn">Create Account</button>
+            <button type="submit" name="login" class="btn">Create Account</button>
             <p class="login-p">Already have an account? <a href="#" class="login-link">Log in</a> </p>
 
         </form>
