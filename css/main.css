@@ -73,11 +73,6 @@ body {
   display: grid;
 }
 
-.form label {
-  color: #163150;
-  font-weight: 600;
-}
-
 .form input[type="text"], .form input[type="password"], .form input[type="number"], .form input[type="email"] {
   width: 290px;
   height: 40px;
@@ -107,14 +102,110 @@ body {
 
 .login-p {
   color: #163150;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
-.login-p .login-link {
+label {
+  color: #163150;
+  font-weight: 600;
+}
+
+.link {
   color: #4F88CF;
 }
 
-.login-p .login-link:hover {
+.link:hover {
   text-decoration: underline;
+}
+
+img {
+  height: 100%;
+}
+
+.form-login {
+  margin-top: 1.5rem;
+}
+
+.form-login .input-container {
+  display: -ms-grid;
+  display: grid;
+}
+
+.form-login .input-container input[type="text"], .form-login .input-container input[type="password"] {
+  padding: 0.5rem;
+  border: 0.12rem solid #8CF8F2;
+  background-color: transparent;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  margin: 0.5rem 0 1rem;
+}
+
+.form-login .input-container input::-webkit-input-placeholder {
+  color: #BE93DC;
+}
+
+.form-login .input-container input:-ms-input-placeholder {
+  color: #BE93DC;
+}
+
+.form-login .input-container input::-ms-input-placeholder {
+  color: #BE93DC;
+}
+
+.form-login .input-container input::placeholder {
+  color: #BE93DC;
+}
+
+.form-login .checkbox-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-login .checkbox-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-login .checkbox-container div label {
+  margin-left: 0.5rem;
+  color: #BE93DC;
+}
+
+.form-login .checkbox-container a {
+  color: #4F88CF;
+}
+
+.form-login .checkbox-container a:hover {
+  text-decoration: underline;
+}
+
+.form-login .signin-btn {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.8rem 0;
+  background-color: #4F88CF;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+.form-login .p-link {
+  text-align: center;
+  margin-top: 2.5rem;
 }
 /*# sourceMappingURL=main.css.map */

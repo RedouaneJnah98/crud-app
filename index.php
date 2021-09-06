@@ -70,7 +70,7 @@ if (isset($_POST["sign_up"])) {
             </div>
 
             <input type="submit" name="sign_up" class="btn" value="Create Account" />
-            <p class="login-p">Already have an account? <a href="./includes/login.php" class="login-link">Log in</a>
+            <p class="login-p">Already have an account? <a href="./includes/login.php" class="link">Log in</a>
             </p>
 
         </form>

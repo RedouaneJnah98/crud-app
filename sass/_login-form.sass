@@ -1,0 +1,51 @@
+.form-login
+    margin-top: 1.5rem
+
+    .input-container
+        display: grid
+
+        input[type="text"], input[type="password"]
+            padding: 0.5rem
+            border: 0.12rem solid #8CF8F2
+            background-color: transparent
+            height: 40px
+            border-radius: 5px
+            outline: none
+            margin: 0.5rem 0 1rem
+
+        input::placeholder
+            color: $subtitle
+
+    .checkbox-container
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        div
+            display: flex
+            align-items: center
+
+            label
+                margin-left: 0.5rem
+                color: $subtitle
+
+        a
+            color: $btn
+
+            &:hover
+                text-decoration: underline
+
+    .signin-btn
+        margin-top: 2rem
+        width: 100%
+        padding: 0.8rem 0
+        background-color: $btn
+        border-color: transparent
+        color: $white-clr
+        cursor: pointer
+        font-size: 1rem
+        border-radius: 6px
+
+    .p-link
+        text-align: center
+        margin-top: 2.5rem

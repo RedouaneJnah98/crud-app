@@ -49,19 +49,24 @@ if (isset($_POST["login"])) {
 
             <!-- form -->
             <form action="" method="post" class="form-login">
-                <div>
+                <div class="input-container">
                     <label for="username">Username</label>
                     <input type="text" name="firstname" placeholder="Your Firstname">
                 </div>
-                <div>
+                <div class="input-container">
                     <label for="password">Pasword</label>
                     <input type="password" name="password" placeholder="Password">
                 </div>
-                <div>
-                    <input type="checkbox" name="remember" id="remember-me">
-                    <label for="remember-me">Remember me</label>
+                <div class="checkbox-container">
+                    <div>
+                        <input type="checkbox" name="remember" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    <a href="#">Reset Password?</a>
                 </div>
-                <input type="submit" name="login" value="Sign In">
+                <input type="submit" name="login" class="signin-btn" value="Sign In">
+
+                <p class="login-p p-link">Don't have an account yet? <a href="../index.php" class="link">Join Us</a></p>
             </form>
             <!-- end of form -->
         </article>
