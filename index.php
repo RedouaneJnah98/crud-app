@@ -1,8 +1,8 @@
-<?php include_once "header.php"; ?>
+<?php include "header.php"; ?>
 
 <?php
 
-if (isset($_POST["login"])) {
+if (isset($_POST["sign_up"])) {
     $firstname = mysqli_real_escape_string($connection, $_POST["firstname"]);
     $lastname = mysqli_real_escape_string($connection, $_POST["lastname"]);
     $phone_number = mysqli_real_escape_string($connection, $_POST["phone_number"]);
@@ -25,7 +25,7 @@ if (isset($_POST["login"])) {
 ?>
 
 <section class="container">
-    <img src="./images/login-img.jpg" class="login-img" alt="technology image">
+    <img src="./images/sign-up-img.jpg" class="login-img" alt="technology image">
 
     <article class="login-section">
         <h2 class="title">Register</h2>
@@ -69,7 +69,7 @@ if (isset($_POST["login"])) {
                 </div>
             </div>
 
-            <button type="submit" name="login" class="btn">Create Account</button>
+            <input type="submit" name="sign_up" class="btn" value="Create Account" />
             <p class="login-p">Already have an account? <a href="./includes/login.php" class="login-link">Log in</a>
             </p>
 

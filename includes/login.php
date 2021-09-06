@@ -3,24 +3,21 @@
 <?php
 if (isset($_POST["login"])) {
     $firstname = $_POST["firstname"];
-    $lastname = $_POST["lastname"];
     $password = $_POST["password"];
 
     $firstname = mysqli_real_escape_string($connection, $firstname);
-    $lastname = mysqli_real_escape_string($connection, $lastname);
     $password = mysqli_real_escape_string($connection, $password);
 
     $query = "SELECT * FROM users";
     $select_users = mysqli_query($connection, $query);
 
+
     while ($row = mysqli_fetch_array($select_users)) {
         $first_name = $row["firstname"];
-        $last_name = $row["lastname"];
         $pwd = $row["password"];
 
-        if ($first_name === $firstname && $last_name === $lastname && $pwd === $password) {
+        if ($first_name === $firstname && $pwd === $password) {
             $_SESSION["firstname"] = $first_name;
-            $_SESSION["lastname"] = $last_name;
             $_SESSION["password"] = $pwd;
 
             header("Location: ../admin/home.php");
@@ -37,11 +34,38 @@ if (isset($_POST["login"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Document</title>
 </head>
 
 <body>
-    <h1>test test</h1>
+    <section class="container">
+        <img src="../images/login-img2.jpg" class="login-img" alt="login-img">
+
+        <article class="login-section">
+            <h2 class="title">Login</h2>
+            <h4>Login to your account</h4>
+            <p class="text">Thank you for get back to us, let's access our the best recommendation for you.</p>
+
+            <!-- form -->
+            <form action="" method="post" class="form-login">
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" name="firstname" placeholder="Your Firstname">
+                </div>
+                <div>
+                    <label for="password">Pasword</label>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <div>
+                    <input type="checkbox" name="remember" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <input type="submit" name="login" value="Sign In">
+            </form>
+            <!-- end of form -->
+        </article>
+    </section>
 </body>
 
 </html>
