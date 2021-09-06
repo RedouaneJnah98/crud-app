@@ -3,18 +3,15 @@
 <?php
 
 if (isset($_POST["login"])) {
-    $firstname = $_POST["firstname"];
-    $last_name = $_POST["lastname"];
-    $phone_number = $_POST["phone_number"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $confirm_password = $_POST["confirm_password"];
-
-    $firstname = mysqli_real_escape_string($connection, $firstname);
-    $password = mysqli_real_escape_string($connection, $password);
+    $firstname = mysqli_real_escape_string($connection, $_POST["firstname"]);
+    $lastname = mysqli_real_escape_string($connection, $_POST["lastname"]);
+    $phone_number = mysqli_real_escape_string($connection, $_POST["phone_number"]);
+    $email = mysqli_real_escape_string($connection, $_POST["email"]);
+    $password = mysqli_real_escape_string($connection, $_POST["password"]);
+    $confirm_password = mysqli_real_escape_string($connection,  $_POST["confirm_password"]);
 
     $query = "INSERT INTO users (firstname, lastname, phone_number, email, password, confirm_password) ";
-    $query .= "VALUES ('$firstname', '$last_name', $phone_number, '$email', '$password', '$confirm_password')";
+    $query .= "VALUES ('$firstname', '$lastname', $phone_number, '$email', '$password', '$confirm_password')";
 
     $create_user = mysqli_query($connection, $query);
 
@@ -37,7 +34,7 @@ if (isset($_POST["login"])) {
         </p>
 
         <!-- form -->
-        <form action="includes/login.php" method="post" class="form">
+        <form action="" method="post" class="form">
 
             <div class="form-group">
                 <div>
@@ -73,7 +70,8 @@ if (isset($_POST["login"])) {
             </div>
 
             <button type="submit" name="login" class="btn">Create Account</button>
-            <p class="login-p">Already have an account? <a href="includes/login.php" class="login-link">Log in</a> </p>
+            <p class="login-p">Already have an account? <a href="./includes/login.php" class="login-link">Log in</a>
+            </p>
 
         </form>
         <!-- end of form -->
